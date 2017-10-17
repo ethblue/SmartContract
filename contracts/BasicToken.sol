@@ -32,9 +32,7 @@ contract ERC20 is ERC20Basic {
  */
 contract BasicToken is ERC20Basic {
   using SaferMath for uint256;
-
   mapping(address => uint256) balances;
-
   /**
   * @dev transfer token for a specified address
   * @param _to The address to transfer to.
@@ -64,7 +62,7 @@ contract BasicToken is ERC20Basic {
 contract StandardToken is ERC20, BasicToken {
 
   mapping (address => mapping (address => uint256)) allowed;
-  //bool public isPreSaleReady = false;
+
 
   /**
    * @dev Transfer tokens from one address to another
@@ -98,7 +96,6 @@ contract StandardToken is ERC20, BasicToken {
    * @param _value The amount of tokens to be spent.
    */
   function approve(address _spender, uint256 _value) public returns (bool) {
-    //require(isPreSaleReady);
     allowed[msg.sender][_spender] = _value;
     Approval(msg.sender, _spender, _value);
     return true;
@@ -121,14 +118,12 @@ contract StandardToken is ERC20, BasicToken {
    * From MonolithDAO Token.sol
    */
   function increaseApproval (address _spender, uint _addedValue) returns (bool success) {
-    //require(isPreSaleReady);
     allowed[msg.sender][_spender] = allowed[msg.sender][_spender].add(_addedValue);
     Approval(msg.sender, _spender, allowed[msg.sender][_spender]);
     return true;
   }
 
   function decreaseApproval (address _spender, uint _subtractedValue) returns (bool success) {
-    //require(isPreSaleReady);
     uint oldValue = allowed[msg.sender][_spender];
     if (_subtractedValue > oldValue) {
       allowed[msg.sender][_spender] = 0;
