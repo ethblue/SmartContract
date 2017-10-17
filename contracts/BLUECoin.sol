@@ -20,11 +20,13 @@ contract BLUECoin is StandardToken, Ownable {
 
   uint public nonce = 0;
 
+event NonceTick(uint nonce);
   function incNonce() {
     nonce += 1;
     if(nonce > 100) {
         nonce = 0;
     }
+    NonceTick(nonce);
   }
 
   // Note intended to act as a source of authorized messaging from development team

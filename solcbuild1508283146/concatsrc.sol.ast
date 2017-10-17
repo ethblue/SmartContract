@@ -1331,7 +1331,7 @@ ContractDefinition "StandardToken"
            Type: bool
            Source: "true"
 ContractDefinition "BLUECoin"
-   Source: "contract BLUECoin is StandardToken, Ownable {\n\n  string public constant name = \"Ethereum Blue\";\n  string public constant symbol = \"BLUE\";\n  uint8 public constant decimals = 8;\n\n  uint256 public constant SUPPLY_CAP = 42000000 * (10 ** uint256(decimals));\n\n  address NULL_ADDRESS = address(0);\n\n  uint public nonce = 0;\n\n  function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n  }\n\n  // Note intended to act as a source of authorized messaging from development team\n  event NoteChanged(string newNote);\n  string public note = \"Welcome to the future of cryptocurrency.\";\n  function setNote(string note_) public onlyOwner {\n      note = note_;\n      NoteChanged(note);\n  }\n  \n  event PerformingDrop(uint count);\n  function drop(address[] addresses, uint256 amount) public onlyOwner {\n    uint256 amt = amount * 10**8;\n    require(amt > 0);\n    require(amt <= SUPPLY_CAP);\n    PerformingDrop(addresses.length);\n    \n    // Maximum drop is 1000 addresses\n    assert(addresses.length <= 1000);\n    assert(balances[owner] >= amt * addresses.length);\n    for (uint i = 0; i < addresses.length; i++) {\n      address recipient = addresses[i];\n      if(recipient != NULL_ADDRESS) {\n        balances[owner] -= amt;\n        balances[recipient] += amt;\n        Transfer(owner, recipient, amt);\n      }\n    }\n  }\n\n  /**\n   * @dev Constructor that gives msg.sender all of existing tokens..\n   */\n  function BLUECoin() {\n    totalSupply = SUPPLY_CAP;\n    balances[msg.sender] = SUPPLY_CAP;\n  }\n}"
+   Source: "contract BLUECoin is StandardToken, Ownable {\n\n  string public constant name = \"Ethereum Blue\";\n  string public constant symbol = \"BLUE\";\n  uint8 public constant decimals = 8;\n\n  uint256 public constant SUPPLY_CAP = 42000000 * (10 ** uint256(decimals));\n\n  address NULL_ADDRESS = address(0);\n\n  uint public nonce = 0;\n\nevent NonceTick(uint nonce);\n  function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n    NonceTick(nonce);\n  }\n\n  // Note intended to act as a source of authorized messaging from development team\n  event NoteChanged(string newNote);\n  string public note = \"Welcome to the future of cryptocurrency.\";\n  function setNote(string note_) public onlyOwner {\n      note = note_;\n      NoteChanged(note);\n  }\n  \n  event PerformingDrop(uint count);\n  function drop(address[] addresses, uint256 amount) public onlyOwner {\n    uint256 amt = amount * 10**8;\n    require(amt > 0);\n    require(amt <= SUPPLY_CAP);\n    PerformingDrop(addresses.length);\n    \n    // Maximum drop is 1000 addresses\n    assert(addresses.length <= 1000);\n    assert(balances[owner] >= amt * addresses.length);\n    for (uint i = 0; i < addresses.length; i++) {\n      address recipient = addresses[i];\n      if(recipient != NULL_ADDRESS) {\n        balances[owner] -= amt;\n        balances[recipient] += amt;\n        Transfer(owner, recipient, amt);\n      }\n    }\n  }\n\n  /**\n   * @dev Constructor that gives msg.sender all of existing tokens..\n   */\n  function BLUECoin() {\n    totalSupply = SUPPLY_CAP;\n    balances[msg.sender] = SUPPLY_CAP;\n  }\n}"
   InheritanceSpecifier
      Source: "StandardToken"
     UserDefinedTypeName "StandardToken"
@@ -1415,14 +1415,23 @@ ContractDefinition "BLUECoin"
     Literal, token: [no token] value: 0
        Type: int_const 0
        Source: "0"
+  EventDefinition "NonceTick"
+     Source: "event NonceTick(uint nonce);"
+    ParameterList
+       Source: "(uint nonce)"
+      VariableDeclaration "nonce"
+         Type: uint256
+         Source: "uint nonce"
+        ElementaryTypeName uint
+           Source: "uint"
   FunctionDefinition "incNonce" - public
-     Source: "function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n  }"
+     Source: "function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n    NonceTick(nonce);\n  }"
     ParameterList
        Source: "()"
     ParameterList
        Source: ""
     Block
-       Source: "{\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n  }"
+       Source: "{\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n    NonceTick(nonce);\n  }"
       ExpressionStatement
          Source: "nonce += 1"
         Assignment using operator +=
@@ -1458,6 +1467,17 @@ ContractDefinition "BLUECoin"
               Literal, token: [no token] value: 0
                  Type: int_const 0
                  Source: "0"
+      ExpressionStatement
+         Source: "NonceTick(nonce)"
+        FunctionCall
+           Type: tuple()
+           Source: "NonceTick(nonce)"
+          Identifier NonceTick
+             Type: function (uint256)
+             Source: "NonceTick"
+          Identifier nonce
+             Type: uint256
+             Source: "nonce"
   EventDefinition "NoteChanged"
      Source: "event NoteChanged(string newNote);"
     ParameterList

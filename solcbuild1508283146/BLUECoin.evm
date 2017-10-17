@@ -1,4 +1,4 @@
-    /* "tmp/concatsrc.sol":6141:7649  contract BLUECoin is StandardToken, Ownable {... */
+    /* "tmp/concatsrc.sol":6141:7700  contract BLUECoin is StandardToken, Ownable {... */
   0x60
   0x40
   dup2
@@ -17,7 +17,7 @@
     /* "tmp/concatsrc.sol":6436:6457  uint public nonce = 0 */
   0x5
   sstore
-    /* "tmp/concatsrc.sol":6675:6738  string public note = "Welcome to the future of cryptocurrency." */
+    /* "tmp/concatsrc.sol":6726:6789  string public note = "Welcome to the future of cryptocurrency." */
   mload
   swap1
   dup2
@@ -52,7 +52,7 @@
   jump	// in(tag_2)
 tag_1:
   pop
-    /* "tmp/concatsrc.sol":7553:7647  function BLUECoin() {... */
+    /* "tmp/concatsrc.sol":7604:7698  function BLUECoin() {... */
   jumpi(tag_3, iszero(callvalue))
   0x0
   dup1
@@ -79,11 +79,11 @@ tag_3:
     /* "tmp/concatsrc.sol":6357:6393  42000000 * (10 ** uint256(decimals)) */
   0xeebe0b40e8000
   0x0
-    /* "tmp/concatsrc.sol":7579:7603  totalSupply = SUPPLY_CAP */
+    /* "tmp/concatsrc.sol":7630:7654  totalSupply = SUPPLY_CAP */
   dup2
   dup2
   sstore
-    /* "tmp/concatsrc.sol":7609:7629  balances[msg.sender] */
+    /* "tmp/concatsrc.sol":7660:7680  balances[msg.sender] */
   swap2
   dup3
   mstore
@@ -92,9 +92,9 @@ tag_3:
   swap1
   swap2
   keccak256
-    /* "tmp/concatsrc.sol":7609:7642  balances[msg.sender] = SUPPLY_CAP */
+    /* "tmp/concatsrc.sol":7660:7693  balances[msg.sender] = SUPPLY_CAP */
   sstore
-    /* "tmp/concatsrc.sol":6141:7649  contract BLUECoin is StandardToken, Ownable {... */
+    /* "tmp/concatsrc.sol":6141:7700  contract BLUECoin is StandardToken, Ownable {... */
   jump(tag_8)
 tag_2:
   dup3
@@ -218,7 +218,7 @@ tag_8:
 stop
 
 sub_0: assembly {
-        /* "tmp/concatsrc.sol":6141:7649  contract BLUECoin is StandardToken, Ownable {... */
+        /* "tmp/concatsrc.sol":6141:7700  contract BLUECoin is StandardToken, Ownable {... */
       mstore(0x40, 0x60)
       jumpi(tag_1, iszero(calldatasize))
       and(div(calldataload(0x0), 0x100000000000000000000000000000000000000000000000000000000), 0xffffffff)
@@ -518,7 +518,7 @@ sub_0: assembly {
       and
       calldataload(0x44)
       jump(tag_39)
-        /* "tmp/concatsrc.sol":6675:6738  string public note = "Welcome to the future of cryptocurrency." */
+        /* "tmp/concatsrc.sol":6726:6789  string public note = "Welcome to the future of cryptocurrency." */
     tag_7:
       jumpi(tag_40, iszero(callvalue))
       0x0
@@ -527,7 +527,7 @@ sub_0: assembly {
     tag_40:
       tag_22
       jump(tag_42)
-        /* "tmp/concatsrc.sol":6742:6840  function setNote(string note_) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6793:6891  function setNote(string note_) public onlyOwner {... */
     tag_8:
       jumpi(tag_47, iszero(callvalue))
       0x0
@@ -618,7 +618,7 @@ sub_0: assembly {
       sub
       swap1
       return
-        /* "tmp/concatsrc.sol":6882:7468  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6933:7519  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
     tag_10:
       jumpi(tag_53, iszero(callvalue))
       0x0
@@ -728,7 +728,7 @@ sub_0: assembly {
       sub
       swap1
       return
-        /* "tmp/concatsrc.sol":6462:6550  function incNonce() {... */
+        /* "tmp/concatsrc.sol":6491:6601  function incNonce() {... */
     tag_14:
       jumpi(tag_65, iszero(callvalue))
       0x0
@@ -1143,7 +1143,7 @@ sub_0: assembly {
       pop
       pop
       jump	// out
-        /* "tmp/concatsrc.sol":6675:6738  string public note = "Welcome to the future of cryptocurrency." */
+        /* "tmp/concatsrc.sol":6726:6789  string public note = "Welcome to the future of cryptocurrency." */
     tag_42:
       0x6
       dup1
@@ -1263,7 +1263,7 @@ sub_0: assembly {
       pop
       dup2
       jump	// out
-        /* "tmp/concatsrc.sol":6742:6840  function setNote(string note_) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6793:6891  function setNote(string note_) public onlyOwner {... */
     tag_49:
         /* "tmp/concatsrc.sol":1087:1092  owner */
       sload(0x3)
@@ -1286,12 +1286,12 @@ sub_0: assembly {
       dup1
       revert
     tag_102:
-        /* "tmp/concatsrc.sol":6798:6802  note */
+        /* "tmp/concatsrc.sol":6849:6853  note */
       0x6
-        /* "tmp/concatsrc.sol":6805:6810  note_ */
+        /* "tmp/concatsrc.sol":6856:6861  note_ */
       dup2
       dup1
-        /* "tmp/concatsrc.sol":6798:6810  note = note_ */
+        /* "tmp/concatsrc.sol":6849:6861  note = note_ */
       mload
       tag_104
       swap3
@@ -1302,11 +1302,11 @@ sub_0: assembly {
       jump	// in(tag_105)
     tag_104:
       pop
-        /* "tmp/concatsrc.sol":6818:6835  NoteChanged(note) */
+        /* "tmp/concatsrc.sol":6869:6886  NoteChanged(note) */
       0x29928852ccc0f94f50f6bbf315a9b4e2d2ded4c4f5de08857997daf086b75436
-        /* "tmp/concatsrc.sol":6830:6834  note */
+        /* "tmp/concatsrc.sol":6881:6885  note */
       0x6
-        /* "tmp/concatsrc.sol":6818:6835  NoteChanged(note) */
+        /* "tmp/concatsrc.sol":6869:6886  NoteChanged(note) */
       mload(0x40)
       0x20
       dup1
@@ -1409,7 +1409,7 @@ sub_0: assembly {
       sub
       swap1
       log1
-        /* "tmp/concatsrc.sol":6742:6840  function setNote(string note_) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6793:6891  function setNote(string note_) public onlyOwner {... */
       pop
       jump	// out
         /* "tmp/concatsrc.sol":6281:6315  uint8 public constant decimals = 8 */
@@ -1419,11 +1419,11 @@ sub_0: assembly {
         /* "tmp/concatsrc.sol":6281:6315  uint8 public constant decimals = 8 */
       dup2
       jump	// out
-        /* "tmp/concatsrc.sol":6882:7468  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6933:7519  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
     tag_55:
         /* "tmp/concatsrc.sol":1087:1092  owner */
       sload(0x3)
-        /* "tmp/concatsrc.sol":6956:6967  uint256 amt */
+        /* "tmp/concatsrc.sol":7007:7018  uint256 amt */
       0x0
       swap1
       dup2
@@ -1449,19 +1449,19 @@ sub_0: assembly {
       dup1
       revert
     tag_110:
-        /* "tmp/concatsrc.sol":6979:6984  10**8 */
+        /* "tmp/concatsrc.sol":7030:7035  10**8 */
       0x5f5e100
-        /* "tmp/concatsrc.sol":6970:6984  amount * 10**8 */
+        /* "tmp/concatsrc.sol":7021:7035  amount * 10**8 */
       dup5
       mul
       swap3
       pop
-        /* "tmp/concatsrc.sol":7004:7005  0 */
+        /* "tmp/concatsrc.sol":7055:7056  0 */
       0x0
-        /* "tmp/concatsrc.sol":6998:7005  amt > 0 */
+        /* "tmp/concatsrc.sol":7049:7056  amt > 0 */
       dup4
       gt
-        /* "tmp/concatsrc.sol":6990:7006  require(amt > 0) */
+        /* "tmp/concatsrc.sol":7041:7057  require(amt > 0) */
       tag_112
       jumpi
       0x0
@@ -1470,24 +1470,24 @@ sub_0: assembly {
     tag_112:
         /* "tmp/concatsrc.sol":6357:6393  42000000 * (10 ** uint256(decimals)) */
       0xeebe0b40e8000
-        /* "tmp/concatsrc.sol":7020:7037  amt <= SUPPLY_CAP */
+        /* "tmp/concatsrc.sol":7071:7088  amt <= SUPPLY_CAP */
       dup4
       gt
       iszero
-        /* "tmp/concatsrc.sol":7012:7038  require(amt <= SUPPLY_CAP) */
+        /* "tmp/concatsrc.sol":7063:7089  require(amt <= SUPPLY_CAP) */
       tag_113
       jumpi
       0x0
       dup1
       revert
     tag_113:
-        /* "tmp/concatsrc.sol":7044:7076  PerformingDrop(addresses.length) */
+        /* "tmp/concatsrc.sol":7095:7127  PerformingDrop(addresses.length) */
       0xd0707c61df60f834131065c6e5663fcae19010cdcd4f80af656fa5216107502d
-        /* "tmp/concatsrc.sol":7059:7068  addresses */
+        /* "tmp/concatsrc.sol":7110:7119  addresses */
       dup6
-        /* "tmp/concatsrc.sol":7059:7075  addresses.length */
+        /* "tmp/concatsrc.sol":7110:7126  addresses.length */
       mload
-        /* "tmp/concatsrc.sol":7044:7076  PerformingDrop(addresses.length) */
+        /* "tmp/concatsrc.sol":7095:7127  PerformingDrop(addresses.length) */
       mload(0x40)
       swap1
       dup2
@@ -1500,77 +1500,77 @@ sub_0: assembly {
       sub
       swap1
       log1
-        /* "tmp/concatsrc.sol":7152:7156  1000 */
+        /* "tmp/concatsrc.sol":7203:7207  1000 */
       0x3e8
-        /* "tmp/concatsrc.sol":7132:7141  addresses */
+        /* "tmp/concatsrc.sol":7183:7192  addresses */
       dup6
-        /* "tmp/concatsrc.sol":7132:7148  addresses.length */
+        /* "tmp/concatsrc.sol":7183:7199  addresses.length */
       mload
-        /* "tmp/concatsrc.sol":7132:7156  addresses.length <= 1000 */
+        /* "tmp/concatsrc.sol":7183:7207  addresses.length <= 1000 */
       gt
       iszero
-        /* "tmp/concatsrc.sol":7125:7157  assert(addresses.length <= 1000) */
+        /* "tmp/concatsrc.sol":7176:7208  assert(addresses.length <= 1000) */
       tag_114
       jumpi
       invalid
     tag_114:
-        /* "tmp/concatsrc.sol":7195:7204  addresses */
+        /* "tmp/concatsrc.sol":7246:7255  addresses */
       dup5
-        /* "tmp/concatsrc.sol":7195:7211  addresses.length */
+        /* "tmp/concatsrc.sol":7246:7262  addresses.length */
       mload
-        /* "tmp/concatsrc.sol":7179:7184  owner */
+        /* "tmp/concatsrc.sol":7230:7235  owner */
       and(sub(exp(0x2, 0xa0), 0x1), sload(0x3))
-        /* "tmp/concatsrc.sol":7170:7185  balances[owner] */
+        /* "tmp/concatsrc.sol":7221:7236  balances[owner] */
       0x0
       swap1
       dup2
       mstore
-        /* "tmp/concatsrc.sol":7170:7178  balances */
+        /* "tmp/concatsrc.sol":7221:7229  balances */
       0x1
-        /* "tmp/concatsrc.sol":7170:7185  balances[owner] */
+        /* "tmp/concatsrc.sol":7221:7236  balances[owner] */
       0x20
       mstore
       0x40
       swap1
       keccak256
       sload
-        /* "tmp/concatsrc.sol":7189:7211  amt * addresses.length */
+        /* "tmp/concatsrc.sol":7240:7262  amt * addresses.length */
       swap1
       dup5
       mul
-        /* "tmp/concatsrc.sol":7170:7211  balances[owner] >= amt * addresses.length */
+        /* "tmp/concatsrc.sol":7221:7262  balances[owner] >= amt * addresses.length */
       swap1
       lt
       iszero
-        /* "tmp/concatsrc.sol":7163:7212  assert(balances[owner] >= amt * addresses.length) */
+        /* "tmp/concatsrc.sol":7214:7263  assert(balances[owner] >= amt * addresses.length) */
       tag_115
       jumpi
       invalid
     tag_115:
-        /* "tmp/concatsrc.sol":7232:7233  0 */
+        /* "tmp/concatsrc.sol":7283:7284  0 */
       0x0
-        /* "tmp/concatsrc.sol":7223:7233  uint i = 0 */
+        /* "tmp/concatsrc.sol":7274:7284  uint i = 0 */
       swap2
       pop
-        /* "tmp/concatsrc.sol":7218:7464  for (uint i = 0; i < addresses.length; i++) {... */
+        /* "tmp/concatsrc.sol":7269:7515  for (uint i = 0; i < addresses.length; i++) {... */
     tag_116:
-        /* "tmp/concatsrc.sol":7239:7248  addresses */
+        /* "tmp/concatsrc.sol":7290:7299  addresses */
       dup5
-        /* "tmp/concatsrc.sol":7239:7255  addresses.length */
+        /* "tmp/concatsrc.sol":7290:7306  addresses.length */
       mload
-        /* "tmp/concatsrc.sol":7235:7236  i */
+        /* "tmp/concatsrc.sol":7286:7287  i */
       dup3
-        /* "tmp/concatsrc.sol":7235:7255  i < addresses.length */
+        /* "tmp/concatsrc.sol":7286:7306  i < addresses.length */
       lt
-        /* "tmp/concatsrc.sol":7218:7464  for (uint i = 0; i < addresses.length; i++) {... */
+        /* "tmp/concatsrc.sol":7269:7515  for (uint i = 0; i < addresses.length; i++) {... */
       iszero
       tag_117
       jumpi
-        /* "tmp/concatsrc.sol":7290:7299  addresses */
+        /* "tmp/concatsrc.sol":7341:7350  addresses */
       dup5
-        /* "tmp/concatsrc.sol":7300:7301  i */
+        /* "tmp/concatsrc.sol":7351:7352  i */
       dup3
-        /* "tmp/concatsrc.sol":7290:7302  addresses[i] */
+        /* "tmp/concatsrc.sol":7341:7353  addresses[i] */
       dup2
       mload
       dup2
@@ -1587,26 +1587,26 @@ sub_0: assembly {
       mul
       add
       mload
-        /* "tmp/concatsrc.sol":7326:7338  NULL_ADDRESS */
+        /* "tmp/concatsrc.sol":7377:7389  NULL_ADDRESS */
       sload(0x4)
-        /* "tmp/concatsrc.sol":7270:7302  address recipient = addresses[i] */
+        /* "tmp/concatsrc.sol":7321:7353  address recipient = addresses[i] */
       swap1
       swap2
       pop
       sub(exp(0x2, 0xa0), 0x1)
-        /* "tmp/concatsrc.sol":7313:7338  recipient != NULL_ADDRESS */
+        /* "tmp/concatsrc.sol":7364:7389  recipient != NULL_ADDRESS */
       dup1
       dup4
       and
-        /* "tmp/concatsrc.sol":7326:7338  NULL_ADDRESS */
+        /* "tmp/concatsrc.sol":7377:7389  NULL_ADDRESS */
       swap2
       and
-        /* "tmp/concatsrc.sol":7313:7338  recipient != NULL_ADDRESS */
+        /* "tmp/concatsrc.sol":7364:7389  recipient != NULL_ADDRESS */
       eq
-        /* "tmp/concatsrc.sol":7310:7458  if(recipient != NULL_ADDRESS) {... */
+        /* "tmp/concatsrc.sol":7361:7509  if(recipient != NULL_ADDRESS) {... */
       tag_120
       jumpi
-        /* "tmp/concatsrc.sol":7359:7364  owner */
+        /* "tmp/concatsrc.sol":7410:7415  owner */
       0x3
       dup1
       sload
@@ -1614,21 +1614,21 @@ sub_0: assembly {
       swap1
       dup2
       and
-        /* "tmp/concatsrc.sol":7350:7365  balances[owner] */
+        /* "tmp/concatsrc.sol":7401:7416  balances[owner] */
       0x0
       swap1
       dup2
       mstore
-        /* "tmp/concatsrc.sol":7350:7358  balances */
+        /* "tmp/concatsrc.sol":7401:7409  balances */
       0x1
-        /* "tmp/concatsrc.sol":7350:7365  balances[owner] */
+        /* "tmp/concatsrc.sol":7401:7416  balances[owner] */
       0x20
       mstore
       0x40
       dup1
       dup3
       keccak256
-        /* "tmp/concatsrc.sol":7350:7372  balances[owner] -= amt */
+        /* "tmp/concatsrc.sol":7401:7423  balances[owner] -= amt */
       dup1
       sload
       dup9
@@ -1636,7 +1636,7 @@ sub_0: assembly {
       sub
       swap1
       sstore
-        /* "tmp/concatsrc.sol":7382:7401  balances[recipient] */
+        /* "tmp/concatsrc.sol":7433:7452  balances[recipient] */
       dup5
       dup4
       and
@@ -1647,30 +1647,30 @@ sub_0: assembly {
       dup2
       swap1
       keccak256
-        /* "tmp/concatsrc.sol":7382:7408  balances[recipient] += amt */
+        /* "tmp/concatsrc.sol":7433:7459  balances[recipient] += amt */
       dup1
       sload
       dup9
       add
       swap1
       sstore
-        /* "tmp/concatsrc.sol":7427:7432  owner */
+        /* "tmp/concatsrc.sol":7478:7483  owner */
       swap3
       sload
-        /* "tmp/concatsrc.sol":7382:7401  balances[recipient] */
+        /* "tmp/concatsrc.sol":7433:7452  balances[recipient] */
       swap1
       swap3
-        /* "tmp/concatsrc.sol":7427:7432  owner */
+        /* "tmp/concatsrc.sol":7478:7483  owner */
       swap2
       and
       swap1
-        /* "tmp/concatsrc.sol":7418:7449  Transfer(owner, recipient, amt) */
+        /* "tmp/concatsrc.sol":7469:7500  Transfer(owner, recipient, amt) */
       0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
       swap1
-        /* "tmp/concatsrc.sol":7369:7372  amt */
+        /* "tmp/concatsrc.sol":7420:7423  amt */
       dup7
       swap1
-        /* "tmp/concatsrc.sol":7418:7449  Transfer(owner, recipient, amt) */
+        /* "tmp/concatsrc.sol":7469:7500  Transfer(owner, recipient, amt) */
       mload
       swap1
       dup2
@@ -1683,18 +1683,18 @@ sub_0: assembly {
       sub
       swap1
       log3
-        /* "tmp/concatsrc.sol":7310:7458  if(recipient != NULL_ADDRESS) {... */
+        /* "tmp/concatsrc.sol":7361:7509  if(recipient != NULL_ADDRESS) {... */
     tag_120:
-        /* "tmp/concatsrc.sol":7257:7260  i++ */
+        /* "tmp/concatsrc.sol":7308:7311  i++ */
       0x1
       swap1
       swap2
       add
       swap1
-        /* "tmp/concatsrc.sol":7218:7464  for (uint i = 0; i < addresses.length; i++) {... */
+        /* "tmp/concatsrc.sol":7269:7515  for (uint i = 0; i < addresses.length; i++) {... */
       jump(tag_116)
     tag_117:
-        /* "tmp/concatsrc.sol":6882:7468  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+        /* "tmp/concatsrc.sol":6933:7519  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
       pop
       pop
       pop
@@ -1928,39 +1928,56 @@ sub_0: assembly {
       and(sub(exp(0x2, 0xa0), 0x1), sload(0x3))
       dup2
       jump	// out
-        /* "tmp/concatsrc.sol":6462:6550  function incNonce() {... */
+        /* "tmp/concatsrc.sol":6491:6601  function incNonce() {... */
     tag_67:
-        /* "tmp/concatsrc.sol":6488:6493  nonce */
+        /* "tmp/concatsrc.sol":6517:6522  nonce */
       0x5
-        /* "tmp/concatsrc.sol":6488:6498  nonce += 1 */
+        /* "tmp/concatsrc.sol":6517:6527  nonce += 1 */
       dup1
       sload
-        /* "tmp/concatsrc.sol":6497:6498  1 */
+        /* "tmp/concatsrc.sol":6526:6527  1 */
       0x1
-        /* "tmp/concatsrc.sol":6488:6498  nonce += 1 */
+        /* "tmp/concatsrc.sol":6517:6527  nonce += 1 */
       add
       swap1
       dup2
       swap1
       sstore
-        /* "tmp/concatsrc.sol":6515:6518  100 */
+        /* "tmp/concatsrc.sol":6544:6547  100 */
       0x64
-        /* "tmp/concatsrc.sol":6507:6518  nonce > 100 */
+        /* "tmp/concatsrc.sol":6536:6547  nonce > 100 */
       swap1
       gt
-        /* "tmp/concatsrc.sol":6504:6546  if(nonce > 100) {... */
+        /* "tmp/concatsrc.sol":6533:6575  if(nonce > 100) {... */
       iszero
       tag_127
       jumpi
-        /* "tmp/concatsrc.sol":6538:6539  0 */
+        /* "tmp/concatsrc.sol":6567:6568  0 */
       0x0
-        /* "tmp/concatsrc.sol":6530:6535  nonce */
+        /* "tmp/concatsrc.sol":6559:6564  nonce */
       0x5
-        /* "tmp/concatsrc.sol":6530:6539  nonce = 0 */
+        /* "tmp/concatsrc.sol":6559:6568  nonce = 0 */
       sstore
-        /* "tmp/concatsrc.sol":6504:6546  if(nonce > 100) {... */
+        /* "tmp/concatsrc.sol":6533:6575  if(nonce > 100) {... */
     tag_127:
-        /* "tmp/concatsrc.sol":6462:6550  function incNonce() {... */
+        /* "tmp/concatsrc.sol":6580:6596  NonceTick(nonce) */
+      0x69da1b4368a5f2483f8b2b6611d68efdedb8e61a34b9824a6e74ad0b96ee524a
+        /* "tmp/concatsrc.sol":6590:6595  nonce */
+      sload(0x5)
+        /* "tmp/concatsrc.sol":6580:6596  NonceTick(nonce) */
+      mload(0x40)
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log1
+        /* "tmp/concatsrc.sol":6491:6601  function incNonce() {... */
       jump	// out
         /* "tmp/concatsrc.sol":6239:6277  string public constant symbol = "BLUE" */
     tag_70:
@@ -2426,7 +2443,7 @@ sub_0: assembly {
       pop
       pop
       jump	// out
-        /* "tmp/concatsrc.sol":6141:7649  contract BLUECoin is StandardToken, Ownable {... */
+        /* "tmp/concatsrc.sol":6141:7700  contract BLUECoin is StandardToken, Ownable {... */
     tag_105:
       dup3
       dup1
@@ -2539,5 +2556,5 @@ sub_0: assembly {
       swap1
       jump	// out
 
-    auxdata: 0xa165627a7a723058200d91c25d1d8dbdde1e9ab31746455073a4cd1ac7911bc1a18d59fd3a045a0e470029
+    auxdata: 0xa165627a7a72305820bd5eb74241a60f90246a84b5e80dec153d0965de9b8ee833bfaf53a95fc2cc360029
 }
