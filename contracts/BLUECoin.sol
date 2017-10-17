@@ -14,7 +14,7 @@ contract BLUECoin is StandardToken, Ownable {
 
   address NULL_ADDRESS = address(0);
 
-  uint nonce = 0;
+  uint public nonce = 0;
 
   function incNonce() {
     nonce += 1;
