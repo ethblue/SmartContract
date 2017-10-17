@@ -168,5 +168,5 @@ sub_0: assembly {
         /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
       jump	// out
 
-    auxdata: 0xa165627a7a72305820d51eda1c9e37c5ba6bcfc3edb76c617c13c4a0a87751b637bd27ad8fbf0c41250029
+    auxdata: 0xa165627a7a723058202f6785327cb9a7845e6237da04ffb81e91bf1536c0a0eabeefba635a18fe3e630029
 }

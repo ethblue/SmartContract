@@ -1,6 +1,10 @@
 pragma solidity ^0.4.4;
 
+//
 // BLUECoin
+// Welcome To The Future of CryptoCurrency
+//
+
 import './BasicToken.sol';
 import './Ownable.sol';
 
@@ -23,9 +27,9 @@ contract BLUECoin is StandardToken, Ownable {
     }
   }
 
-  // Note intended to act as a source of authorized messaging from dev team
+  // Note intended to act as a source of authorized messaging from development team
   event NoteChanged(string newNote);
-  string public note = "Welcome to the future of crypto.";
+  string public note = "Welcome to the future of cryptocurrency.";
   function setNote(string note_) public onlyOwner {
       note = note_;
       NoteChanged(note);

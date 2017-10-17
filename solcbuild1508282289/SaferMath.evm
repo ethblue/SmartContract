@@ -21,5 +21,5 @@ sub_0: assembly {
       dup1
       revert
 
-    auxdata: 0xa165627a7a723058207cd8b53e22f3e2322441ef21cc05f7f6e00530bd486fe1baf59867acf586bcc20029
+    auxdata: 0xa165627a7a72305820be547a25b8b4f8bbec5546bfe0ac76e1744af009771be348e7cd6f46fc4196a60029
 }

@@ -1331,7 +1331,7 @@ ContractDefinition "StandardToken"
            Type: bool
            Source: "true"
 ContractDefinition "BLUECoin"
-   Source: "contract BLUECoin is StandardToken, Ownable {\n\n  string public constant name = \"Ethereum Blue\";\n  string public constant symbol = \"BLUE\";\n  uint8 public constant decimals = 8;\n\n  uint256 public constant SUPPLY_CAP = 42000000 * (10 ** uint256(decimals));\n\n  address NULL_ADDRESS = address(0);\n\n  uint public nonce = 0;\n\n  function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n  }\n\n  // Note intended to act as a source of authorized messaging from dev team\n  event NoteChanged(string newNote);\n  string public note = \"Welcome to the future of crypto.\";\n  function setNote(string note_) public onlyOwner {\n      note = note_;\n      NoteChanged(note);\n  }\n  \n  event PerformingDrop(uint count);\n  function drop(address[] addresses, uint256 amount) public onlyOwner {\n    uint256 amt = amount * 10**8;\n    require(amt > 0);\n    require(amt <= SUPPLY_CAP);\n    PerformingDrop(addresses.length);\n    \n    // Maximum drop is 1000 addresses\n    assert(addresses.length <= 1000);\n    assert(balances[owner] >= amt * addresses.length);\n    for (uint i = 0; i < addresses.length; i++) {\n      address recipient = addresses[i];\n      if(recipient != NULL_ADDRESS) {\n        balances[owner] -= amt;\n        balances[recipient] += amt;\n        Transfer(owner, recipient, amt);\n      }\n    }\n  }\n\n  /**\n   * @dev Constructor that gives msg.sender all of existing tokens..\n   */\n  function BLUECoin() {\n    totalSupply = SUPPLY_CAP;\n    balances[msg.sender] = SUPPLY_CAP;\n  }\n}"
+   Source: "contract BLUECoin is StandardToken, Ownable {\n\n  string public constant name = \"Ethereum Blue\";\n  string public constant symbol = \"BLUE\";\n  uint8 public constant decimals = 8;\n\n  uint256 public constant SUPPLY_CAP = 42000000 * (10 ** uint256(decimals));\n\n  address NULL_ADDRESS = address(0);\n\n  uint public nonce = 0;\n\n  function incNonce() {\n    nonce += 1;\n    if(nonce > 100) {\n        nonce = 0;\n    }\n  }\n\n  // Note intended to act as a source of authorized messaging from development team\n  event NoteChanged(string newNote);\n  string public note = \"Welcome to the future of cryptocurrency.\";\n  function setNote(string note_) public onlyOwner {\n      note = note_;\n      NoteChanged(note);\n  }\n  \n  event PerformingDrop(uint count);\n  function drop(address[] addresses, uint256 amount) public onlyOwner {\n    uint256 amt = amount * 10**8;\n    require(amt > 0);\n    require(amt <= SUPPLY_CAP);\n    PerformingDrop(addresses.length);\n    \n    // Maximum drop is 1000 addresses\n    assert(addresses.length <= 1000);\n    assert(balances[owner] >= amt * addresses.length);\n    for (uint i = 0; i < addresses.length; i++) {\n      address recipient = addresses[i];\n      if(recipient != NULL_ADDRESS) {\n        balances[owner] -= amt;\n        balances[recipient] += amt;\n        Transfer(owner, recipient, amt);\n      }\n    }\n  }\n\n  /**\n   * @dev Constructor that gives msg.sender all of existing tokens..\n   */\n  function BLUECoin() {\n    totalSupply = SUPPLY_CAP;\n    balances[msg.sender] = SUPPLY_CAP;\n  }\n}"
   InheritanceSpecifier
      Source: "StandardToken"
     UserDefinedTypeName "StandardToken"
@@ -1469,12 +1469,12 @@ ContractDefinition "BLUECoin"
            Source: "string"
   VariableDeclaration "note"
      Type: string storage ref
-     Source: "string public note = \"Welcome to the future of crypto.\""
+     Source: "string public note = \"Welcome to the future of cryptocurrency.\""
     ElementaryTypeName string
        Source: "string"
-    Literal, token: [no token] value: Welcome to the future of crypto.
-       Type: literal_string "Welcome to the future of crypto."
-       Source: "\"Welcome to the future of crypto.\""
+    Literal, token: [no token] value: Welcome to the future of cryptocurrency.
+       Type: literal_string "Welcome to the future of cryptocurrency."
+       Source: "\"Welcome to the future of cryptocurrency.\""
   FunctionDefinition "setNote" - public
      Source: "function setNote(string note_) public onlyOwner {\n      note = note_;\n      NoteChanged(note);\n  }"
     ParameterList
