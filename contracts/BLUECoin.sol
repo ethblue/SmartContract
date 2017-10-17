@@ -10,7 +10,7 @@ contract BLUECoin is StandardToken, Ownable {
   string public constant symbol = "BLUE";
   uint8 public constant decimals = 8;
 
-  uint256 public constant INITIAL_SUPPLY = 42000000 * (10 ** uint256(decimals));
+  uint256 public constant SUPPLY_CAP = 42000000 * (10 ** uint256(decimals));
 
   address NULL_ADDRESS = address(0);
 
@@ -35,7 +35,7 @@ contract BLUECoin is StandardToken, Ownable {
   function drop(address[] addresses, uint256 amount) public onlyOwner {
     uint256 amt = amount * 10**8;
     require(amt > 0);
-    require(amt <= INITIAL_SUPPLY);
+    require(amt <= SUPPLY_CAP);
     PerformingDrop(addresses.length);
     
     // Maximum drop is 1000 addresses
@@ -55,7 +55,7 @@ contract BLUECoin is StandardToken, Ownable {
    * @dev Constructor that gives msg.sender all of existing tokens..
    */
   function BLUECoin() {
-    totalSupply = INITIAL_SUPPLY;
-    balances[msg.sender] = INITIAL_SUPPLY;
+    totalSupply = SUPPLY_CAP;
+    balances[msg.sender] = SUPPLY_CAP;
   }
 }

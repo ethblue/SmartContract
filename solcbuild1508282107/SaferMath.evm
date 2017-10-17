@@ -1,0 +1,25 @@
+    /* "tmp/concatsrc.sol":1439:2140  library SaferMath {... */
+  mstore(0x40, 0x60)
+  jumpi(tag_1, iszero(callvalue))
+  0x0
+  dup1
+  revert
+tag_1:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "tmp/concatsrc.sol":1439:2140  library SaferMath {... */
+      mstore(0x40, 0x60)
+      0x0
+      dup1
+      revert
+
+    auxdata: 0xa165627a7a723058207cd8b53e22f3e2322441ef21cc05f7f6e00530bd486fe1baf59867acf586bcc20029
+}
