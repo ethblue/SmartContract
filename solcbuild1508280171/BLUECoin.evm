@@ -1,0 +1,2520 @@
+    /* "tmp/concatsrc.sol":6275:7769  contract BLUECoin is StandardToken, Ownable {... */
+  0x60
+  0x40
+  swap1
+  dup2
+  mstore
+    /* "tmp/concatsrc.sol":6529:6562  address NULL_ADDRESS = address(0) */
+  0x4
+  dup1
+  sload
+  not(sub(exp(0x2, 0xa0), 0x1))
+  and
+  swap1
+  sstore
+    /* "tmp/concatsrc.sol":6560:6561  0 */
+  0x0
+    /* "tmp/concatsrc.sol":6567:6581  uint nonce = 0 */
+  0x5
+  sstore
+    /* "tmp/concatsrc.sol":6275:7769  contract BLUECoin is StandardToken, Ownable {... */
+  dup1
+    /* "tmp/concatsrc.sol":6791:6846  string public note = "Welcome to the future of crypto." */
+  mload
+  swap1
+  dup2
+  add
+  0x40
+  mstore
+  0x20
+  dup1
+  dup3
+  mstore
+  0x57656c636f6d6520746f2074686520667574757265206f662063727970746f2e
+  swap1
+  dup3
+  add
+  mstore
+  0x6
+  swap1
+  dup1
+  mload
+  tag_1
+  swap3
+  swap2
+  0x20
+  add
+  swap1
+  jump	// in(tag_2)
+tag_1:
+  pop
+    /* "tmp/concatsrc.sol":7665:7767  function BLUECoin() {... */
+  jumpi(tag_3, iszero(callvalue))
+  0x0
+  dup1
+  revert
+tag_3:
+    /* "tmp/concatsrc.sol":935:940  owner */
+  0x3
+    /* "tmp/concatsrc.sol":935:953  owner = msg.sender */
+  dup1
+  sload
+  not(sub(exp(0x2, 0xa0), 0x1))
+  and
+    /* "tmp/concatsrc.sol":943:953  msg.sender */
+  caller
+  sub(exp(0x2, 0xa0), 0x1)
+    /* "tmp/concatsrc.sol":935:953  owner = msg.sender */
+  and
+  swap1
+  dup2
+  or
+  swap1
+  swap2
+  sstore
+    /* "tmp/concatsrc.sol":6488:6524  42000000 * (10 ** uint256(decimals)) */
+  0xeebe0b40e8000
+  0x0
+    /* "tmp/concatsrc.sol":7691:7719  totalSupply = INITIAL_SUPPLY */
+  dup2
+  dup2
+  sstore
+    /* "tmp/concatsrc.sol":7725:7745  balances[msg.sender] */
+  swap2
+  dup3
+  mstore
+  mstore(0x20, 0x1)
+  0x40
+  swap1
+  swap2
+  keccak256
+    /* "tmp/concatsrc.sol":7725:7762  balances[msg.sender] = INITIAL_SUPPLY */
+  sstore
+    /* "tmp/concatsrc.sol":6275:7769  contract BLUECoin is StandardToken, Ownable {... */
+  jump(tag_8)
+tag_2:
+  dup3
+  dup1
+  sload
+  0x1
+  dup2
+  0x1
+  and
+  iszero
+  0x100
+  mul
+  sub
+  and
+  0x2
+  swap1
+  div
+  swap1
+  0x0
+  mstore
+  keccak256(0x0, 0x20)
+  swap1
+  0x1f
+  add
+  0x20
+  swap1
+  div
+  dup2
+  add
+  swap3
+  dup3
+  0x1f
+  lt
+  tag_10
+  jumpi
+  dup1
+  mload
+  not(0xff)
+  and
+  dup4
+  dup1
+  add
+  or
+  dup6
+  sstore
+  jump(tag_12)
+tag_10:
+  dup3
+  dup1
+  add
+  0x1
+  add
+  dup6
+  sstore
+  dup3
+  iszero
+  tag_12
+  jumpi
+  swap2
+  dup3
+  add
+tag_11:
+  dup3
+  dup2
+  gt
+  iszero
+  tag_12
+  jumpi
+  dup3
+  mload
+  dup3
+  sstore
+  swap2
+  0x20
+  add
+  swap2
+  swap1
+  0x1
+  add
+  swap1
+  jump(tag_11)
+tag_12:
+  pop
+  tag_13
+  swap3
+  swap2
+  pop
+  jump	// in(tag_14)
+tag_13:
+  pop
+  swap1
+  jump	// out
+tag_14:
+  tag_15
+  swap2
+  swap1
+tag_16:
+  dup1
+  dup3
+  gt
+  iszero
+  tag_13
+  jumpi
+  0x0
+  dup2
+  sstore
+  0x1
+  add
+  jump(tag_16)
+tag_15:
+  swap1
+  jump	// out
+tag_8:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "tmp/concatsrc.sol":6275:7769  contract BLUECoin is StandardToken, Ownable {... */
+      mstore(0x40, 0x60)
+      jumpi(tag_1, iszero(calldatasize))
+      and(div(calldataload(0x0), 0x100000000000000000000000000000000000000000000000000000000), 0xffffffff)
+      0x6fdde03
+      dup2
+      eq
+      tag_2
+      jumpi
+      dup1
+      0x95ea7b3
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x18160ddd
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x23b872dd
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x26d111f5
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x2d7b299d
+      eq
+      tag_7
+      jumpi
+      dup1
+      0x2ff2e9dc
+      eq
+      tag_8
+      jumpi
+      dup1
+      0x313ce567
+      eq
+      tag_9
+      jumpi
+      dup1
+      0x3974874b
+      eq
+      tag_10
+      jumpi
+      dup1
+      0x66188463
+      eq
+      tag_11
+      jumpi
+      dup1
+      0x70a08231
+      eq
+      tag_12
+      jumpi
+      dup1
+      0x8da5cb5b
+      eq
+      tag_13
+      jumpi
+      dup1
+      0x911475cc
+      eq
+      tag_14
+      jumpi
+      dup1
+      0x95d89b41
+      eq
+      tag_15
+      jumpi
+      dup1
+      0xa9059cbb
+      eq
+      tag_16
+      jumpi
+      dup1
+      0xd73dd623
+      eq
+      tag_17
+      jumpi
+      dup1
+      0xdd62ed3e
+      eq
+      tag_18
+      jumpi
+      dup1
+      0xf2fde38b
+      eq
+      tag_19
+      jumpi
+    tag_1:
+      0x0
+      dup1
+      revert
+        /* "tmp/concatsrc.sol":6324:6363  string public constant name = "TEKCOIN" */
+    tag_2:
+      jumpi(tag_20, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_20:
+      tag_21
+      jump(tag_22)
+    tag_21:
+      mload(0x40)
+      0x20
+      dup1
+      dup3
+      mstore
+      dup2
+      swap1
+      dup2
+      add
+      dup4
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x0
+        /* "--CODEGEN--":8:108   */
+    tag_23:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:29   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_24
+      jumpi
+        /* "--CODEGEN--":99:100   */
+      dup1
+        /* "--CODEGEN--":94:97   */
+      dup3
+        /* "--CODEGEN--":90:93   */
+      add
+        /* "--CODEGEN--":84:89   */
+      mload
+        /* "--CODEGEN--":71:74   */
+      dup4
+      dup3
+      add
+        /* "--CODEGEN--":64:70   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":45:48   */
+      add
+        /* "--CODEGEN--":8:108   */
+      jump(tag_23)
+    tag_24:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "--CODEGEN--":3:112   */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_26
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x1
+      dup4
+      0x20
+      sub
+      0x100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_26:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":4633:4847  function approve(address _spender, uint256 _value) public returns (bool) {... */
+    tag_3:
+      jumpi(tag_27, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_27:
+      tag_28
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      calldataload(0x24)
+      jump(tag_29)
+    tag_28:
+      mload(0x40)
+      swap1
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":50:76  uint256 public totalSupply */
+    tag_4:
+      jumpi(tag_30, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_30:
+      tag_31
+      jump(tag_32)
+    tag_31:
+      mload(0x40)
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":3477:4010  function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {... */
+    tag_5:
+      jumpi(tag_33, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_33:
+      tag_28
+      sub(exp(0x2, 0xa0), 0x1)
+      calldataload(0x4)
+      dup2
+      and
+      swap1
+      calldataload(0x24)
+      and
+      calldataload(0x44)
+      jump(tag_35)
+        /* "tmp/concatsrc.sol":6791:6846  string public note = "Welcome to the future of crypto." */
+    tag_6:
+      jumpi(tag_36, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_36:
+      tag_21
+      jump(tag_38)
+        /* "tmp/concatsrc.sol":6850:6948  function setNote(string note_) public onlyOwner {... */
+    tag_7:
+      jumpi(tag_43, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_43:
+      tag_44
+      0x4
+      0x24
+      dup2
+      calldataload
+      dup2
+      dup2
+      add
+      swap1
+      dup4
+      add
+      calldataload
+      dup1
+      0x20
+      0x1f
+      dup3
+      add
+      dup2
+      swap1
+      div
+      dup2
+      mul
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup2
+      dup2
+      mstore
+      swap3
+      swap2
+      swap1
+      0x20
+      dup5
+      add
+      dup4
+      dup4
+      dup1
+      dup3
+      dup5
+      calldatacopy
+      pop
+      swap5
+      swap7
+      pop
+      tag_45
+      swap6
+      pop
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump
+    tag_44:
+      stop
+        /* "tmp/concatsrc.sol":6447:6524  uint256 public constant INITIAL_SUPPLY = 42000000 * (10 ** uint256(decimals)) */
+    tag_8:
+      jumpi(tag_46, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_46:
+      tag_31
+      jump(tag_48)
+        /* "tmp/concatsrc.sol":6408:6442  uint8 public constant decimals = 8 */
+    tag_9:
+      jumpi(tag_49, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_49:
+      tag_50
+      jump(tag_51)
+    tag_50:
+      mload(0x40)
+      0xff
+      swap1
+      swap2
+      and
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":6990:7580  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+    tag_10:
+      jumpi(tag_52, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_52:
+      tag_44
+      0x4
+      0x24
+      dup2
+      calldataload
+      dup2
+      dup2
+      add
+      swap1
+      dup4
+      add
+      calldataload
+      dup1
+      0x20
+      dup2
+      dup2
+      mul
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap4
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup4
+      dup4
+      0x20
+      mul
+      dup1
+      dup3
+      dup5
+      calldatacopy
+      pop
+      swap5
+      swap7
+      pop
+      pop
+      swap4
+      calldataload
+      swap4
+      pop
+      tag_54
+      swap3
+      pop
+      pop
+      pop
+      jump
+        /* "tmp/concatsrc.sol":5840:6271  function decreaseApproval (address _spender, uint _subtractedValue) returns (bool success) {... */
+    tag_11:
+      jumpi(tag_55, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_55:
+      tag_28
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      calldataload(0x24)
+      jump(tag_57)
+        /* "tmp/concatsrc.sol":2939:3050  function balanceOf(address _owner) public constant returns (uint256 balance) {... */
+    tag_12:
+      jumpi(tag_58, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_58:
+      tag_31
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      jump(tag_60)
+        /* "tmp/concatsrc.sol":681:701  address public owner */
+    tag_13:
+      jumpi(tag_61, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_61:
+      tag_62
+      jump(tag_63)
+    tag_62:
+      mload(0x40)
+      sub(exp(0x2, 0xa0), 0x1)
+      swap1
+      swap2
+      and
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":6586:6674  function incNonce() {... */
+    tag_14:
+      jumpi(tag_64, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_64:
+      tag_44
+      jump(tag_66)
+        /* "tmp/concatsrc.sol":6367:6404  string public constant symbol = "TEK" */
+    tag_15:
+      jumpi(tag_67, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_67:
+      tag_21
+      jump(tag_69)
+        /* "tmp/concatsrc.sol":2403:2737  function transfer(address _to, uint256 _value) public returns (bool) {... */
+    tag_16:
+      jumpi(tag_74, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_74:
+      tag_28
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      calldataload(0x24)
+      jump(tag_76)
+        /* "tmp/concatsrc.sol":5546:5836  function increaseApproval (address _spender, uint _addedValue) returns (bool success) {... */
+    tag_17:
+      jumpi(tag_77, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_77:
+      tag_28
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      calldataload(0x24)
+      jump(tag_79)
+        /* "tmp/concatsrc.sol":5166:5306  function allowance(address _owner, address _spender) public constant returns (uint256 remaining) {... */
+    tag_18:
+      jumpi(tag_80, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_80:
+      tag_31
+      sub(exp(0x2, 0xa0), 0x1)
+      calldataload(0x4)
+      dup2
+      and
+      swap1
+      calldataload(0x24)
+      and
+      jump(tag_82)
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+    tag_19:
+      jumpi(tag_83, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_83:
+      tag_44
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      jump(tag_85)
+        /* "tmp/concatsrc.sol":6324:6363  string public constant name = "TEKCOIN" */
+    tag_22:
+      0x40
+      dup1
+      mload
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      0x7
+      dup2
+      mstore
+      0x54454b434f494e00000000000000000000000000000000000000000000000000
+      0x20
+      dup3
+      add
+      mstore
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":4633:4847  function approve(address _spender, uint256 _value) public returns (bool) {... */
+    tag_29:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":4751:4761  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":4743:4762  allowed[msg.sender] */
+      dup2
+      and
+        /* "tmp/concatsrc.sol":4700:4704  bool */
+      0x0
+        /* "tmp/concatsrc.sol":4743:4762  allowed[msg.sender] */
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":4743:4750  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":4743:4762  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":4743:4772  allowed[msg.sender][_spender] */
+      swap5
+      dup8
+      and
+      dup1
+      dup5
+      mstore
+      swap5
+      swap1
+      swap2
+      mstore
+      dup1
+      dup3
+      keccak256
+        /* "tmp/concatsrc.sol":4743:4781  allowed[msg.sender][_spender] = _value */
+      dup6
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":4700:4704  bool */
+      swap1
+      swap3
+        /* "tmp/concatsrc.sol":4743:4772  allowed[msg.sender][_spender] */
+      swap2
+        /* "tmp/concatsrc.sol":4743:4762  allowed[msg.sender] */
+      swap1
+        /* "tmp/concatsrc.sol":4787:4825  Approval(msg.sender, _spender, _value) */
+      0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+      swap1
+        /* "tmp/concatsrc.sol":4775:4781  _value */
+      dup6
+      swap1
+        /* "tmp/concatsrc.sol":4787:4825  Approval(msg.sender, _spender, _value) */
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+      pop
+        /* "tmp/concatsrc.sol":4838:4842  true */
+      0x1
+        /* "tmp/concatsrc.sol":4633:4847  function approve(address _spender, uint256 _value) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":50:76  uint256 public totalSupply */
+    tag_32:
+      sload(0x0)
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":3477:4010  function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {... */
+    tag_35:
+        /* "tmp/concatsrc.sol":3559:3563  bool */
+      0x0
+      dup1
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3579:3596  _to != address(0) */
+      dup5
+      and
+      iszero
+      iszero
+        /* "tmp/concatsrc.sol":3571:3597  require(_to != address(0)) */
+      tag_88
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_88:
+      pop
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3625:3639  allowed[_from] */
+      dup1
+      dup6
+      and
+      0x0
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":3625:3632  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":3625:3639  allowed[_from] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":3640:3650  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":3625:3651  allowed[_from][msg.sender] */
+      swap1
+      swap6
+      and
+      dup4
+      mstore
+      swap4
+      dup2
+      mstore
+      dup4
+      dup3
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":3823:3838  balances[_from] */
+      swap3
+      dup3
+      mstore
+        /* "tmp/concatsrc.sol":3823:3831  balances */
+      0x1
+        /* "tmp/concatsrc.sol":3823:3838  balances[_from] */
+      swap1
+      mstore
+      swap2
+      swap1
+      swap2
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":3823:3850  balances[_from].sub(_value) */
+      tag_89
+      swap1
+        /* "tmp/concatsrc.sol":3843:3849  _value */
+      dup5
+        /* "tmp/concatsrc.sol":3823:3850  balances[_from].sub(_value) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":3823:3842  balances[_from].sub */
+      tag_90
+        /* "tmp/concatsrc.sol":3823:3850  balances[_from].sub(_value) */
+      and
+      jump	// in
+    tag_89:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3805:3820  balances[_from] */
+      dup1
+      dup8
+      and
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":3805:3813  balances */
+      0x1
+        /* "tmp/concatsrc.sol":3805:3820  balances[_from] */
+      0x20
+      mstore
+      0x40
+      dup1
+      dup3
+      keccak256
+        /* "tmp/concatsrc.sol":3805:3850  balances[_from] = balances[_from].sub(_value) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "tmp/concatsrc.sol":3872:3885  balances[_to] */
+      swap1
+      dup7
+      and
+      dup2
+      mstore
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":3872:3897  balances[_to].add(_value) */
+      tag_91
+      swap1
+        /* "tmp/concatsrc.sol":3890:3896  _value */
+      dup5
+        /* "tmp/concatsrc.sol":3872:3897  balances[_to].add(_value) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":3872:3889  balances[_to].add */
+      tag_92
+        /* "tmp/concatsrc.sol":3872:3897  balances[_to].add(_value) */
+      and
+      jump	// in
+    tag_91:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3856:3869  balances[_to] */
+      dup6
+      and
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":3856:3864  balances */
+      0x1
+        /* "tmp/concatsrc.sol":3856:3869  balances[_to] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+        /* "tmp/concatsrc.sol":3856:3897  balances[_to] = balances[_to].add(_value) */
+      sstore
+        /* "tmp/concatsrc.sol":3932:3954  _allowance.sub(_value) */
+      tag_93
+        /* "tmp/concatsrc.sol":3932:3942  _allowance */
+      dup2
+        /* "tmp/concatsrc.sol":3947:3953  _value */
+      dup5
+        /* "tmp/concatsrc.sol":3932:3954  _allowance.sub(_value) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":3932:3946  _allowance.sub */
+      tag_90
+        /* "tmp/concatsrc.sol":3932:3954  _allowance.sub(_value) */
+      and
+      jump	// in
+    tag_93:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3903:3917  allowed[_from] */
+      dup1
+      dup8
+      and
+      0x0
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":3903:3910  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":3903:3917  allowed[_from] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":3918:3928  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":3903:3929  allowed[_from][msg.sender] */
+      dup7
+      and
+      dup5
+      mstore
+      swap1
+      swap2
+      mstore
+      swap1
+      dup2
+      swap1
+      keccak256
+        /* "tmp/concatsrc.sol":3903:3954  allowed[_from][msg.sender] = _allowance.sub(_value) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "tmp/concatsrc.sol":3960:3988  Transfer(_from, _to, _value) */
+      swap1
+      dup7
+      and
+      swap2
+      0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+      swap1
+        /* "tmp/concatsrc.sol":3981:3987  _value */
+      dup7
+      swap1
+        /* "tmp/concatsrc.sol":3960:3988  Transfer(_from, _to, _value) */
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+      pop
+        /* "tmp/concatsrc.sol":4001:4005  true */
+      0x1
+      swap5
+        /* "tmp/concatsrc.sol":3477:4010  function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {... */
+      swap4
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":6791:6846  string public note = "Welcome to the future of crypto." */
+    tag_38:
+      0x6
+      dup1
+      sload
+      0x1
+      dup2
+      0x1
+      and
+      iszero
+      0x100
+      mul
+      sub
+      and
+      0x2
+      swap1
+      div
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup1
+      sload
+      0x1
+      dup2
+      0x1
+      and
+      iszero
+      0x100
+      mul
+      sub
+      and
+      0x2
+      swap1
+      div
+      dup1
+      iszero
+      tag_94
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_95
+      jumpi
+      0x100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_94)
+    tag_95:
+      dup3
+      add
+      swap2
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      swap1
+    tag_96:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x1
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_96
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_94:
+      pop
+      pop
+      pop
+      pop
+      pop
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":6850:6948  function setNote(string note_) public onlyOwner {... */
+    tag_45:
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      sload(0x3)
+        /* "tmp/concatsrc.sol":1073:1083  msg.sender */
+      caller
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      swap1
+      dup2
+      and
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      swap2
+      and
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      eq
+        /* "tmp/concatsrc.sol":1065:1093  require(msg.sender == owner) */
+      tag_98
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_98:
+        /* "tmp/concatsrc.sol":6906:6910  note */
+      0x6
+        /* "tmp/concatsrc.sol":6913:6918  note_ */
+      dup2
+      dup1
+        /* "tmp/concatsrc.sol":6906:6918  note = note_ */
+      mload
+      tag_100
+      swap3
+      swap2
+      0x20
+      add
+      swap1
+      jump	// in(tag_101)
+    tag_100:
+      pop
+        /* "tmp/concatsrc.sol":6926:6943  NoteChanged(note) */
+      0x29928852ccc0f94f50f6bbf315a9b4e2d2ded4c4f5de08857997daf086b75436
+        /* "tmp/concatsrc.sol":6938:6942  note */
+      0x6
+        /* "tmp/concatsrc.sol":6926:6943  NoteChanged(note) */
+      mload(0x40)
+      0x20
+      dup1
+      dup3
+      mstore
+      dup3
+      sload
+      0x2
+      not(0x0)
+      0x100
+      0x1
+      dup5
+      and
+      iszero
+      mul
+      add
+      swap1
+      swap2
+      and
+      div
+      swap1
+      dup3
+      add
+      dup2
+      swap1
+      mstore
+      dup2
+      swap1
+      0x40
+      dup3
+      add
+      swap1
+      dup5
+      swap1
+      dup1
+      iszero
+      tag_102
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_103
+      jumpi
+      0x100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_102)
+    tag_103:
+      dup3
+      add
+      swap2
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      swap1
+    tag_104:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x1
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_104
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_102:
+      pop
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log1
+        /* "tmp/concatsrc.sol":6850:6948  function setNote(string note_) public onlyOwner {... */
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":6447:6524  uint256 public constant INITIAL_SUPPLY = 42000000 * (10 ** uint256(decimals)) */
+    tag_48:
+        /* "tmp/concatsrc.sol":6488:6524  42000000 * (10 ** uint256(decimals)) */
+      0xeebe0b40e8000
+        /* "tmp/concatsrc.sol":6447:6524  uint256 public constant INITIAL_SUPPLY = 42000000 * (10 ** uint256(decimals)) */
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":6408:6442  uint8 public constant decimals = 8 */
+    tag_51:
+        /* "tmp/concatsrc.sol":6441:6442  8 */
+      0x8
+        /* "tmp/concatsrc.sol":6408:6442  uint8 public constant decimals = 8 */
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":6990:7580  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+    tag_54:
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      sload(0x3)
+        /* "tmp/concatsrc.sol":7064:7075  uint256 amt */
+      0x0
+      swap1
+      dup2
+      swap1
+      dup2
+      swap1
+        /* "tmp/concatsrc.sol":1073:1083  msg.sender */
+      caller
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      swap1
+      dup2
+      and
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      swap2
+      and
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      eq
+        /* "tmp/concatsrc.sol":1065:1093  require(msg.sender == owner) */
+      tag_106
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_106:
+        /* "tmp/concatsrc.sol":7087:7092  10**8 */
+      0x5f5e100
+        /* "tmp/concatsrc.sol":7078:7092  amount * 10**8 */
+      dup5
+      mul
+      swap3
+      pop
+        /* "tmp/concatsrc.sol":7112:7113  0 */
+      0x0
+        /* "tmp/concatsrc.sol":7106:7113  amt > 0 */
+      dup4
+      gt
+        /* "tmp/concatsrc.sol":7098:7114  require(amt > 0) */
+      tag_108
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_108:
+        /* "tmp/concatsrc.sol":6488:6524  42000000 * (10 ** uint256(decimals)) */
+      0xeebe0b40e8000
+        /* "tmp/concatsrc.sol":7128:7149  amt <= INITIAL_SUPPLY */
+      dup4
+      gt
+      iszero
+        /* "tmp/concatsrc.sol":7120:7150  require(amt <= INITIAL_SUPPLY) */
+      tag_109
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_109:
+        /* "tmp/concatsrc.sol":7156:7188  PerformingDrop(addresses.length) */
+      0xd0707c61df60f834131065c6e5663fcae19010cdcd4f80af656fa5216107502d
+        /* "tmp/concatsrc.sol":7171:7180  addresses */
+      dup6
+        /* "tmp/concatsrc.sol":7171:7187  addresses.length */
+      mload
+        /* "tmp/concatsrc.sol":7156:7188  PerformingDrop(addresses.length) */
+      mload(0x40)
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log1
+        /* "tmp/concatsrc.sol":7264:7268  1000 */
+      0x3e8
+        /* "tmp/concatsrc.sol":7244:7253  addresses */
+      dup6
+        /* "tmp/concatsrc.sol":7244:7260  addresses.length */
+      mload
+        /* "tmp/concatsrc.sol":7244:7268  addresses.length <= 1000 */
+      gt
+      iszero
+        /* "tmp/concatsrc.sol":7237:7269  assert(addresses.length <= 1000) */
+      tag_110
+      jumpi
+      invalid
+    tag_110:
+        /* "tmp/concatsrc.sol":7307:7316  addresses */
+      dup5
+        /* "tmp/concatsrc.sol":7307:7323  addresses.length */
+      mload
+        /* "tmp/concatsrc.sol":7291:7296  owner */
+      and(sub(exp(0x2, 0xa0), 0x1), sload(0x3))
+        /* "tmp/concatsrc.sol":7282:7297  balances[owner] */
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":7282:7290  balances */
+      0x1
+        /* "tmp/concatsrc.sol":7282:7297  balances[owner] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":7301:7323  amt * addresses.length */
+      swap1
+      dup5
+      mul
+        /* "tmp/concatsrc.sol":7282:7323  balances[owner] >= amt * addresses.length */
+      swap1
+      lt
+      iszero
+        /* "tmp/concatsrc.sol":7275:7324  assert(balances[owner] >= amt * addresses.length) */
+      tag_111
+      jumpi
+      invalid
+    tag_111:
+        /* "tmp/concatsrc.sol":7344:7345  0 */
+      0x0
+        /* "tmp/concatsrc.sol":7335:7345  uint i = 0 */
+      swap2
+      pop
+        /* "tmp/concatsrc.sol":7330:7576  for (uint i = 0; i < addresses.length; i++) {... */
+    tag_112:
+        /* "tmp/concatsrc.sol":7351:7360  addresses */
+      dup5
+        /* "tmp/concatsrc.sol":7351:7367  addresses.length */
+      mload
+        /* "tmp/concatsrc.sol":7347:7348  i */
+      dup3
+        /* "tmp/concatsrc.sol":7347:7367  i < addresses.length */
+      lt
+        /* "tmp/concatsrc.sol":7330:7576  for (uint i = 0; i < addresses.length; i++) {... */
+      iszero
+      tag_113
+      jumpi
+        /* "tmp/concatsrc.sol":7402:7411  addresses */
+      dup5
+        /* "tmp/concatsrc.sol":7412:7413  i */
+      dup3
+        /* "tmp/concatsrc.sol":7402:7414  addresses[i] */
+      dup2
+      mload
+      dup2
+      lt
+      tag_115
+      jumpi
+      invalid
+    tag_115:
+      swap1
+      0x20
+      add
+      swap1
+      0x20
+      mul
+      add
+      mload
+        /* "tmp/concatsrc.sol":7438:7450  NULL_ADDRESS */
+      sload(0x4)
+        /* "tmp/concatsrc.sol":7382:7414  address recipient = addresses[i] */
+      swap1
+      swap2
+      pop
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":7425:7450  recipient != NULL_ADDRESS */
+      dup1
+      dup4
+      and
+        /* "tmp/concatsrc.sol":7438:7450  NULL_ADDRESS */
+      swap2
+      and
+        /* "tmp/concatsrc.sol":7425:7450  recipient != NULL_ADDRESS */
+      eq
+        /* "tmp/concatsrc.sol":7422:7570  if(recipient != NULL_ADDRESS) {... */
+      tag_116
+      jumpi
+        /* "tmp/concatsrc.sol":7471:7476  owner */
+      0x3
+      dup1
+      sload
+      sub(exp(0x2, 0xa0), 0x1)
+      swap1
+      dup2
+      and
+        /* "tmp/concatsrc.sol":7462:7477  balances[owner] */
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":7462:7470  balances */
+      0x1
+        /* "tmp/concatsrc.sol":7462:7477  balances[owner] */
+      0x20
+      mstore
+      0x40
+      dup1
+      dup3
+      keccak256
+        /* "tmp/concatsrc.sol":7462:7484  balances[owner] -= amt */
+      dup1
+      sload
+      dup9
+      swap1
+      sub
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":7494:7513  balances[recipient] */
+      dup5
+      dup4
+      and
+      dup1
+      dup4
+      mstore
+      swap2
+      dup2
+      swap1
+      keccak256
+        /* "tmp/concatsrc.sol":7494:7520  balances[recipient] += amt */
+      dup1
+      sload
+      dup9
+      add
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":7539:7544  owner */
+      swap3
+      sload
+        /* "tmp/concatsrc.sol":7494:7513  balances[recipient] */
+      swap1
+      swap3
+        /* "tmp/concatsrc.sol":7539:7544  owner */
+      swap2
+      and
+      swap1
+        /* "tmp/concatsrc.sol":7530:7561  Transfer(owner, recipient, amt) */
+      0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+      swap1
+        /* "tmp/concatsrc.sol":7481:7484  amt */
+      dup7
+      swap1
+        /* "tmp/concatsrc.sol":7530:7561  Transfer(owner, recipient, amt) */
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "tmp/concatsrc.sol":7422:7570  if(recipient != NULL_ADDRESS) {... */
+    tag_116:
+        /* "tmp/concatsrc.sol":7369:7372  i++ */
+      0x1
+      swap1
+      swap2
+      add
+      swap1
+        /* "tmp/concatsrc.sol":7330:7576  for (uint i = 0; i < addresses.length; i++) {... */
+      jump(tag_112)
+    tag_113:
+        /* "tmp/concatsrc.sol":6990:7580  function drop(address[] addresses, uint256 amount) public onlyOwner {... */
+      pop
+      pop
+      pop
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":5840:6271  function decreaseApproval (address _spender, uint _subtractedValue) returns (bool success) {... */
+    tag_57:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":5992:6002  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":5984:6003  allowed[msg.sender] */
+      dup2
+      and
+        /* "tmp/concatsrc.sol":5917:5929  bool success */
+      0x0
+        /* "tmp/concatsrc.sol":5984:6003  allowed[msg.sender] */
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":5984:5991  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":5984:6003  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":5984:6013  allowed[msg.sender][_spender] */
+      swap4
+      dup7
+      and
+      dup4
+      mstore
+      swap3
+      swap1
+      mstore
+      swap1
+      dup2
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":6023:6050  _subtractedValue > oldValue */
+      dup1
+      dup4
+      gt
+        /* "tmp/concatsrc.sol":6019:6183  if (_subtractedValue > oldValue) {... */
+      iszero
+      tag_118
+      jumpi
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":6068:6078  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":6060:6079  allowed[msg.sender] */
+      dup2
+      and
+        /* "tmp/concatsrc.sol":6092:6093  0 */
+      0x0
+        /* "tmp/concatsrc.sol":6060:6079  allowed[msg.sender] */
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":6060:6067  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":6060:6079  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":6060:6089  allowed[msg.sender][_spender] */
+      swap4
+      dup9
+      and
+      dup4
+      mstore
+      swap3
+      swap1
+      mstore
+      swap1
+      dup2
+      keccak256
+        /* "tmp/concatsrc.sol":6060:6093  allowed[msg.sender][_spender] = 0 */
+      sstore
+        /* "tmp/concatsrc.sol":6019:6183  if (_subtractedValue > oldValue) {... */
+      jump(tag_119)
+    tag_118:
+        /* "tmp/concatsrc.sol":6146:6176  oldValue.sub(_subtractedValue) */
+      tag_120
+        /* "tmp/concatsrc.sol":6146:6154  oldValue */
+      dup2
+        /* "tmp/concatsrc.sol":6159:6175  _subtractedValue */
+      dup5
+        /* "tmp/concatsrc.sol":6146:6176  oldValue.sub(_subtractedValue) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":6146:6158  oldValue.sub */
+      tag_90
+        /* "tmp/concatsrc.sol":6146:6176  oldValue.sub(_subtractedValue) */
+      and
+      jump	// in
+    tag_120:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":6122:6132  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":6114:6133  allowed[msg.sender] */
+      dup2
+      and
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":6114:6121  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":6114:6133  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":6114:6143  allowed[msg.sender][_spender] */
+      swap4
+      dup10
+      and
+      dup4
+      mstore
+      swap3
+      swap1
+      mstore
+      keccak256
+        /* "tmp/concatsrc.sol":6114:6176  allowed[msg.sender][_spender] = oldValue.sub(_subtractedValue) */
+      sstore
+        /* "tmp/concatsrc.sol":6019:6183  if (_subtractedValue > oldValue) {... */
+    tag_119:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":6197:6207  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":6188:6249  Approval(msg.sender, _spender, allowed[msg.sender][_spender]) */
+      dup2
+      and
+        /* "tmp/concatsrc.sol":6219:6238  allowed[msg.sender] */
+      0x0
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":6219:6226  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":6219:6238  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":6188:6249  Approval(msg.sender, _spender, allowed[msg.sender][_spender]) */
+      swap5
+      dup10
+      and
+        /* "tmp/concatsrc.sol":6219:6248  allowed[msg.sender][_spender] */
+      dup1
+      dup5
+      mstore
+      swap5
+      swap1
+      swap2
+      mstore
+      swap1
+      dup2
+      swap1
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":6188:6249  Approval(msg.sender, _spender, allowed[msg.sender][_spender]) */
+      0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+      swap2
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+      pop
+        /* "tmp/concatsrc.sol":6262:6266  true */
+      0x1
+      swap4
+        /* "tmp/concatsrc.sol":5840:6271  function decreaseApproval (address _spender, uint _subtractedValue) returns (bool success) {... */
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":2939:3050  function balanceOf(address _owner) public constant returns (uint256 balance) {... */
+    tag_60:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":3029:3045  balances[_owner] */
+      and
+        /* "tmp/concatsrc.sol":2999:3014  uint256 balance */
+      0x0
+        /* "tmp/concatsrc.sol":3029:3045  balances[_owner] */
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":3029:3037  balances */
+      0x1
+        /* "tmp/concatsrc.sol":3029:3045  balances[_owner] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+      swap1
+        /* "tmp/concatsrc.sol":2939:3050  function balanceOf(address _owner) public constant returns (uint256 balance) {... */
+      jump	// out
+        /* "tmp/concatsrc.sol":681:701  address public owner */
+    tag_63:
+      and(sub(exp(0x2, 0xa0), 0x1), sload(0x3))
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":6586:6674  function incNonce() {... */
+    tag_66:
+        /* "tmp/concatsrc.sol":6612:6617  nonce */
+      0x5
+        /* "tmp/concatsrc.sol":6612:6622  nonce += 1 */
+      dup1
+      sload
+        /* "tmp/concatsrc.sol":6621:6622  1 */
+      0x1
+        /* "tmp/concatsrc.sol":6612:6622  nonce += 1 */
+      add
+      swap1
+      dup2
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":6639:6642  100 */
+      0x64
+        /* "tmp/concatsrc.sol":6631:6642  nonce > 100 */
+      swap1
+      gt
+        /* "tmp/concatsrc.sol":6628:6670  if(nonce > 100) {... */
+      iszero
+      tag_123
+      jumpi
+        /* "tmp/concatsrc.sol":6662:6663  0 */
+      0x0
+        /* "tmp/concatsrc.sol":6654:6659  nonce */
+      0x5
+        /* "tmp/concatsrc.sol":6654:6663  nonce = 0 */
+      sstore
+        /* "tmp/concatsrc.sol":6628:6670  if(nonce > 100) {... */
+    tag_123:
+        /* "tmp/concatsrc.sol":6586:6674  function incNonce() {... */
+      jump	// out
+        /* "tmp/concatsrc.sol":6367:6404  string public constant symbol = "TEK" */
+    tag_69:
+      0x40
+      dup1
+      mload
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      0x3
+      dup2
+      mstore
+      0x54454b0000000000000000000000000000000000000000000000000000000000
+      0x20
+      dup3
+      add
+      mstore
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":2403:2737  function transfer(address _to, uint256 _value) public returns (bool) {... */
+    tag_76:
+        /* "tmp/concatsrc.sol":2466:2470  bool */
+      0x0
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":2486:2503  _to != address(0) */
+      dup4
+      and
+      iszero
+      iszero
+        /* "tmp/concatsrc.sol":2478:2504  require(_to != address(0)) */
+      tag_125
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_125:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":2606:2616  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":2597:2617  balances[msg.sender] */
+      and
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":2597:2605  balances */
+      0x1
+        /* "tmp/concatsrc.sol":2597:2617  balances[msg.sender] */
+      0x20
+      mstore
+      0x40
+      swap1
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":2597:2629  balances[msg.sender].sub(_value) */
+      tag_126
+      swap1
+        /* "tmp/concatsrc.sol":2622:2628  _value */
+      dup4
+        /* "tmp/concatsrc.sol":2597:2629  balances[msg.sender].sub(_value) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":2597:2621  balances[msg.sender].sub */
+      tag_90
+        /* "tmp/concatsrc.sol":2597:2629  balances[msg.sender].sub(_value) */
+      and
+      jump	// in
+    tag_126:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":2583:2593  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":2574:2594  balances[msg.sender] */
+      dup2
+      and
+      0x0
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":2574:2582  balances */
+      0x1
+        /* "tmp/concatsrc.sol":2574:2594  balances[msg.sender] */
+      0x20
+      mstore
+      0x40
+      dup1
+      dup3
+      keccak256
+        /* "tmp/concatsrc.sol":2574:2629  balances[msg.sender] = balances[msg.sender].sub(_value) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "tmp/concatsrc.sol":2651:2664  balances[_to] */
+      swap1
+      dup6
+      and
+      dup2
+      mstore
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":2651:2676  balances[_to].add(_value) */
+      tag_127
+      swap1
+        /* "tmp/concatsrc.sol":2669:2675  _value */
+      dup4
+        /* "tmp/concatsrc.sol":2651:2676  balances[_to].add(_value) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":2651:2668  balances[_to].add */
+      tag_92
+        /* "tmp/concatsrc.sol":2651:2676  balances[_to].add(_value) */
+      and
+      jump	// in
+    tag_127:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":2635:2648  balances[_to] */
+      dup1
+      dup6
+      and
+      0x0
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":2635:2643  balances */
+      0x1
+        /* "tmp/concatsrc.sol":2635:2648  balances[_to] */
+      0x20
+      mstore
+      0x40
+      swap1
+      dup2
+      swap1
+      keccak256
+        /* "tmp/concatsrc.sol":2635:2676  balances[_to] = balances[_to].add(_value) */
+      swap4
+      swap1
+      swap4
+      sstore
+        /* "tmp/concatsrc.sol":2635:2648  balances[_to] */
+      swap2
+        /* "tmp/concatsrc.sol":2691:2701  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":2682:2715  Transfer(msg.sender, _to, _value) */
+      swap1
+      swap2
+      and
+      swap1
+      0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+      swap1
+        /* "tmp/concatsrc.sol":2708:2714  _value */
+      dup6
+      swap1
+        /* "tmp/concatsrc.sol":2682:2715  Transfer(msg.sender, _to, _value) */
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+      pop
+        /* "tmp/concatsrc.sol":2728:2732  true */
+      0x1
+        /* "tmp/concatsrc.sol":2403:2737  function transfer(address _to, uint256 _value) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":5546:5836  function increaseApproval (address _spender, uint _addedValue) returns (bool success) {... */
+    tag_79:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":5709:5719  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":5701:5720  allowed[msg.sender] */
+      dup2
+      and
+        /* "tmp/concatsrc.sol":5618:5630  bool success */
+      0x0
+        /* "tmp/concatsrc.sol":5701:5720  allowed[msg.sender] */
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":5701:5708  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":5701:5720  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":5701:5730  allowed[msg.sender][_spender] */
+      swap4
+      dup7
+      and
+      dup4
+      mstore
+      swap3
+      swap1
+      mstore
+      swap1
+      dup2
+      keccak256
+      sload
+        /* "tmp/concatsrc.sol":5701:5747  allowed[msg.sender][_spender].add(_addedValue) */
+      tag_129
+      swap1
+        /* "tmp/concatsrc.sol":5735:5746  _addedValue */
+      dup4
+        /* "tmp/concatsrc.sol":5701:5747  allowed[msg.sender][_spender].add(_addedValue) */
+      0xffffffff
+        /* "tmp/concatsrc.sol":5701:5734  allowed[msg.sender][_spender].add */
+      tag_92
+        /* "tmp/concatsrc.sol":5701:5747  allowed[msg.sender][_spender].add(_addedValue) */
+      and
+      jump	// in
+    tag_129:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":5677:5687  msg.sender */
+      caller
+        /* "tmp/concatsrc.sol":5669:5688  allowed[msg.sender] */
+      dup2
+      and
+      0x0
+      dup2
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":5669:5676  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":5669:5688  allowed[msg.sender] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":5669:5698  allowed[msg.sender][_spender] */
+      swap5
+      dup10
+      and
+      dup1
+      dup5
+      mstore
+      swap5
+      swap1
+      swap2
+      mstore
+      swap1
+      dup2
+      swap1
+      keccak256
+        /* "tmp/concatsrc.sol":5669:5747  allowed[msg.sender][_spender] = allowed[msg.sender][_spender].add(_addedValue) */
+      dup5
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":5669:5698  allowed[msg.sender][_spender] */
+      swap2
+      swap3
+        /* "tmp/concatsrc.sol":5669:5688  allowed[msg.sender] */
+      swap1
+      swap2
+        /* "tmp/concatsrc.sol":5753:5814  Approval(msg.sender, _spender, allowed[msg.sender][_spender]) */
+      0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+      swap2
+        /* "tmp/concatsrc.sol":5669:5747  allowed[msg.sender][_spender] = allowed[msg.sender][_spender].add(_addedValue) */
+      swap1
+        /* "tmp/concatsrc.sol":5753:5814  Approval(msg.sender, _spender, allowed[msg.sender][_spender]) */
+      mload
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+      pop
+        /* "tmp/concatsrc.sol":5827:5831  true */
+      0x1
+        /* "tmp/concatsrc.sol":5546:5836  function increaseApproval (address _spender, uint _addedValue) returns (bool success) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":5166:5306  function allowance(address _owner, address _spender) public constant returns (uint256 remaining) {... */
+    tag_82:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":5276:5291  allowed[_owner] */
+      swap2
+      dup3
+      and
+        /* "tmp/concatsrc.sol":5244:5261  uint256 remaining */
+      0x0
+        /* "tmp/concatsrc.sol":5276:5291  allowed[_owner] */
+      swap1
+      dup2
+      mstore
+        /* "tmp/concatsrc.sol":5276:5283  allowed */
+      0x2
+        /* "tmp/concatsrc.sol":5276:5291  allowed[_owner] */
+      0x20
+      swap1
+      dup2
+      mstore
+      0x40
+      dup1
+      dup4
+      keccak256
+        /* "tmp/concatsrc.sol":5276:5301  allowed[_owner][_spender] */
+      swap4
+      swap1
+      swap5
+      and
+      dup3
+      mstore
+      swap2
+      swap1
+      swap2
+      mstore
+      keccak256
+      sload
+      swap1
+        /* "tmp/concatsrc.sol":5166:5306  function allowance(address _owner, address _spender) public constant returns (uint256 remaining) {... */
+      jump	// out
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+    tag_85:
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      sload(0x3)
+        /* "tmp/concatsrc.sol":1073:1083  msg.sender */
+      caller
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      swap1
+      dup2
+      and
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      swap2
+      and
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      eq
+        /* "tmp/concatsrc.sol":1065:1093  require(msg.sender == owner) */
+      tag_132
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_132:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1342:1364  newOwner != address(0) */
+      dup2
+      and
+      iszero
+      iszero
+        /* "tmp/concatsrc.sol":1334:1365  require(newOwner != address(0)) */
+      tag_134
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_134:
+        /* "tmp/concatsrc.sol":1392:1397  owner */
+      sload(0x3)
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1371:1408  OwnershipTransferred(owner, newOwner) */
+      dup1
+      dup4
+      and
+      swap2
+        /* "tmp/concatsrc.sol":1392:1397  owner */
+      and
+        /* "tmp/concatsrc.sol":1371:1408  OwnershipTransferred(owner, newOwner) */
+      0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "tmp/concatsrc.sol":1414:1419  owner */
+      0x3
+        /* "tmp/concatsrc.sol":1414:1430  owner = newOwner */
+      dup1
+      sload
+      not(0xffffffffffffffffffffffffffffffffffffffff)
+      and
+      sub(exp(0x2, 0xa0), 0x1)
+      swap3
+      swap1
+      swap3
+      and
+      swap2
+      swap1
+      swap2
+      or
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+      jump	// out
+        /* "tmp/concatsrc.sol":1887:2001  function sub(uint256 a, uint256 b) internal constant returns (uint256) {... */
+    tag_90:
+        /* "tmp/concatsrc.sol":1949:1956  uint256 */
+      0x0
+        /* "tmp/concatsrc.sol":1971:1977  b <= a */
+      dup3
+      dup3
+      gt
+      iszero
+        /* "tmp/concatsrc.sol":1964:1978  assert(b <= a) */
+      tag_136
+      jumpi
+      invalid
+    tag_136:
+      pop
+        /* "tmp/concatsrc.sol":1991:1996  a - b */
+      swap1
+      sub
+      swap1
+        /* "tmp/concatsrc.sol":1887:2001  function sub(uint256 a, uint256 b) internal constant returns (uint256) {... */
+      jump	// out
+        /* "tmp/concatsrc.sol":2005:2138  function add(uint256 a, uint256 b) internal constant returns (uint256) {... */
+    tag_92:
+        /* "tmp/concatsrc.sol":2067:2074  uint256 */
+      0x0
+        /* "tmp/concatsrc.sol":2094:2099  a + b */
+      dup3
+      dup3
+      add
+        /* "tmp/concatsrc.sol":2112:2118  c >= a */
+      dup4
+      dup2
+      lt
+      iszero
+        /* "tmp/concatsrc.sol":2105:2119  assert(c >= a) */
+      tag_138
+      jumpi
+      invalid
+    tag_138:
+        /* "tmp/concatsrc.sol":2132:2133  c */
+      swap4
+        /* "tmp/concatsrc.sol":2005:2138  function add(uint256 a, uint256 b) internal constant returns (uint256) {... */
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "tmp/concatsrc.sol":6275:7769  contract BLUECoin is StandardToken, Ownable {... */
+    tag_101:
+      dup3
+      dup1
+      sload
+      0x1
+      dup2
+      0x1
+      and
+      iszero
+      0x100
+      mul
+      sub
+      and
+      0x2
+      swap1
+      div
+      swap1
+      0x0
+      mstore
+      keccak256(0x0, 0x20)
+      swap1
+      0x1f
+      add
+      0x20
+      swap1
+      div
+      dup2
+      add
+      swap3
+      dup3
+      0x1f
+      lt
+      tag_140
+      jumpi
+      dup1
+      mload
+      not(0xff)
+      and
+      dup4
+      dup1
+      add
+      or
+      dup6
+      sstore
+      jump(tag_142)
+    tag_140:
+      dup3
+      dup1
+      add
+      0x1
+      add
+      dup6
+      sstore
+      dup3
+      iszero
+      tag_142
+      jumpi
+      swap2
+      dup3
+      add
+    tag_141:
+      dup3
+      dup2
+      gt
+      iszero
+      tag_142
+      jumpi
+      dup3
+      mload
+      dup3
+      sstore
+      swap2
+      0x20
+      add
+      swap2
+      swap1
+      0x1
+      add
+      swap1
+      jump(tag_141)
+    tag_142:
+      pop
+      tag_143
+      swap3
+      swap2
+      pop
+      jump	// in(tag_144)
+    tag_143:
+      pop
+      swap1
+      jump	// out
+    tag_144:
+      tag_145
+      swap2
+      swap1
+    tag_146:
+      dup1
+      dup3
+      gt
+      iszero
+      tag_143
+      jumpi
+      0x0
+      dup2
+      sstore
+      0x1
+      add
+      jump(tag_146)
+    tag_145:
+      swap1
+      jump	// out
+
+    auxdata: 0xa165627a7a723058207d6e0b85a615678595be653a89e7d05038beae33279a3cebf19f54b5e3e1f7dd0029
+}

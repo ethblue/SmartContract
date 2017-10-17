@@ -1,0 +1,172 @@
+    /* "tmp/concatsrc.sol":660:1437  contract Ownable {... */
+  mstore(0x40, 0x60)
+    /* "tmp/concatsrc.sol":910:958  function Ownable() {... */
+  jumpi(tag_1, iszero(callvalue))
+  0x0
+  dup1
+  revert
+tag_1:
+    /* "tmp/concatsrc.sol":935:940  owner */
+  0x0
+    /* "tmp/concatsrc.sol":935:953  owner = msg.sender */
+  dup1
+  sload
+  sub(exp(0x2, 0xa0), 0x1)
+    /* "tmp/concatsrc.sol":943:953  msg.sender */
+  caller
+    /* "tmp/concatsrc.sol":935:953  owner = msg.sender */
+  and
+  not(sub(exp(0x2, 0xa0), 0x1))
+  swap1
+  swap2
+  and
+  or
+  swap1
+  sstore
+    /* "tmp/concatsrc.sol":660:1437  contract Ownable {... */
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x0
+  codecopy
+  0x0
+  return
+stop
+
+sub_0: assembly {
+        /* "tmp/concatsrc.sol":660:1437  contract Ownable {... */
+      mstore(0x40, 0x60)
+      and(div(calldataload(0x0), 0x100000000000000000000000000000000000000000000000000000000), 0xffffffff)
+      0x8da5cb5b
+      dup2
+      eq
+      tag_2
+      jumpi
+      dup1
+      0xf2fde38b
+      eq
+      tag_3
+      jumpi
+      0x0
+      dup1
+      revert
+        /* "tmp/concatsrc.sol":681:701  address public owner */
+    tag_2:
+      jumpi(tag_4, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_4:
+      tag_5
+      jump(tag_6)
+    tag_5:
+      mload(0x40)
+      sub(exp(0x2, 0xa0), 0x1)
+      swap1
+      swap2
+      and
+      dup2
+      mstore
+      0x20
+      add
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+    tag_3:
+      jumpi(tag_7, iszero(callvalue))
+      0x0
+      dup1
+      revert
+    tag_7:
+      tag_8
+      and(calldataload(0x4), sub(exp(0x2, 0xa0), 0x1))
+      jump(tag_9)
+    tag_8:
+      stop
+        /* "tmp/concatsrc.sol":681:701  address public owner */
+    tag_6:
+      and(sub(exp(0x2, 0xa0), 0x1), sload(0x0))
+      dup2
+      jump	// out
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+    tag_9:
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      sload(0x0)
+        /* "tmp/concatsrc.sol":1073:1083  msg.sender */
+      caller
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      swap1
+      dup2
+      and
+        /* "tmp/concatsrc.sol":1087:1092  owner */
+      swap2
+      and
+        /* "tmp/concatsrc.sol":1073:1092  msg.sender == owner */
+      eq
+        /* "tmp/concatsrc.sol":1065:1093  require(msg.sender == owner) */
+      tag_11
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_11:
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1342:1364  newOwner != address(0) */
+      dup2
+      and
+      iszero
+      iszero
+        /* "tmp/concatsrc.sol":1334:1365  require(newOwner != address(0)) */
+      tag_13
+      jumpi
+      0x0
+      dup1
+      revert
+    tag_13:
+        /* "tmp/concatsrc.sol":1392:1397  owner */
+      sload(0x0)
+      sub(exp(0x2, 0xa0), 0x1)
+        /* "tmp/concatsrc.sol":1371:1408  OwnershipTransferred(owner, newOwner) */
+      dup1
+      dup4
+      and
+      swap2
+        /* "tmp/concatsrc.sol":1392:1397  owner */
+      and
+        /* "tmp/concatsrc.sol":1371:1408  OwnershipTransferred(owner, newOwner) */
+      0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0
+      mload(0x40)
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "tmp/concatsrc.sol":1414:1419  owner */
+      0x0
+        /* "tmp/concatsrc.sol":1414:1430  owner = newOwner */
+      dup1
+      sload
+      not(0xffffffffffffffffffffffffffffffffffffffff)
+      and
+      sub(exp(0x2, 0xa0), 0x1)
+      swap3
+      swap1
+      swap3
+      and
+      swap2
+      swap1
+      swap2
+      or
+      swap1
+      sstore
+        /* "tmp/concatsrc.sol":1266:1435  function transferOwnership(address newOwner) onlyOwner public {... */
+      jump	// out
+
+    auxdata: 0xa165627a7a72305820769ded6496937c995cb9f308736663a5a02a2d4c604c63acc4881ac59ec334270029
+}
